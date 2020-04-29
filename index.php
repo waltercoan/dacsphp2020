@@ -67,6 +67,7 @@
                  <th>id</th>
                  <th>Nome</th>
                  <th>Endereço</th>
+                 <th>Ações</th>
                </tr>
              </thead>
              <tbody>
@@ -77,6 +78,7 @@
                  <td><?=$row[0]?></td>
                  <td><?=$row[1]?></td>
                  <td><?=$row[2]?></td>
+                 <td><a href="formcliente.php?id=<?=$row[0]?>" class="btn btn-primary">Alterar</a></td>
                </tr>
                <?php
                }

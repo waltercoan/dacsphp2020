@@ -52,9 +52,10 @@
       $id=0;
       $nome="";
       $endereco="";
+      $estado=1;
       
+      $con = mysqli_connect("localhost","bob","bob","univille");
       if(isset($_GET['id'])){
-          $con = mysqli_connect("localhost","bob","bob","univille");
           $select = "select * from cliente where codigo = ?";
           $stmt = mysqli_prepare($con, $select);
           mysqli_stmt_bind_param($stmt, "i", $_GET['id']);
@@ -65,7 +66,12 @@
           $id = $row['codigo'];
           $nome = $row['nome'];
           $endereco = $row['endereco'];
+          //$estado = $row['estado'];
       }
+      
+      $sqlestados = "select * from estado";
+      $resultestados = mysqli_query($con,$sqlestados);
+
       
   ?>
 
@@ -90,6 +96,21 @@
                 <input type="text" class="form-control" id="txtEndereco" 
                   name="txtEndereco" value="<?=$endereco?>">
             </div>
+            <div class="form-group">
+                <label for="txtEstado">Estado</label>
+                <select id="txtEstado" name="txtEstado">
+                   <?php
+                      while($rowestado = $resultestados->fetch_row()){
+                   ?>
+                   <option value="<?=$rowestado[0]?>" <?=($estado==$rowestado[0]?"selected":"")?> ><?=$rowestado[1]?></option>
+                   <?php
+                      }
+                   ?>
+                </select>
+                
+            </div>
+            
+            
             <button type="submit" class="btn btn-primary">Enviar</button>
           </form>
       </p>

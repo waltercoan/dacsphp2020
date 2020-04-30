@@ -62,7 +62,7 @@
           mysqli_stmt_bind_result($stmt, $result);
           $result = mysqli_stmt_get_result($stmt);
           $row = $result->fetch_assoc();
-          $id = $row['id'];
+          $id = $row['codigo'];
           $nome = $row['nome'];
           $endereco = $row['endereco'];
       }

@@ -54,7 +54,7 @@
       $endereco="";
       $estado=1;
       
-      $con = mysqli_connect("localhost","bob","bob","univille");
+      $con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
       if(isset($_GET['id'])){
           $select = "select * from cliente where codigo = ?";
           $stmt = mysqli_prepare($con, $select);

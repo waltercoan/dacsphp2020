@@ -52,7 +52,7 @@
   <div class="container">
 
     <?php
-        $con = mysqli_connect("localhost","bob","bob","univille");
+        $con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
         $sql = "select * from cliente";
         $result = mysqli_query($con,$sql);
     ?>

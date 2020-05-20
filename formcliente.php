@@ -49,12 +49,13 @@
   </nav>
 
   <?php
+      include 'dbconnect.php';
       $id=0;
       $nome="";
       $endereco="";
       $estado=1;
       
-      $con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+      //$con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
       if(isset($_GET['id'])){
           $select = "select * from cliente where codigo = ?";
           $stmt = mysqli_prepare($con, $select);
@@ -96,7 +97,7 @@
                 <input type="text" class="form-control" id="txtEndereco" 
                   name="txtEndereco" value="<?=$endereco?>">
             </div>
-            <div class="form-group">
+            <!--<div class="form-group">
                 <label for="txtEstado">Estado</label>
                 <select id="txtEstado" name="txtEstado">
                    <?php
@@ -108,7 +109,7 @@
                    ?>
                 </select>
                 
-            </div>
+            </div>-->
             
             
             <button type="submit" class="btn btn-primary">Enviar</button>

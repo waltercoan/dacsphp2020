@@ -1,4 +1,5 @@
 <?php
+    include 'dbconnect.php';
     $id       = $_POST['txtId'];
     $nome     = $_POST['txtNome'];
     $endereco = $_POST['txtEndereco'];
@@ -7,7 +8,7 @@
     var_dump($nome);
     var_dump($endereco);
     
-    $con = mysqli_connect("localhost","bob","bob","univille");
+    //$con = mysqli_connect("localhost","bob","bob","univille");
     
     if($id == "0"){
         $insert = "insert into cliente(nome, endereco) values(?,?);";

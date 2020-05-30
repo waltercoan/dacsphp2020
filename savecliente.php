@@ -4,9 +4,9 @@
     $nome     = $_POST['txtNome'];
     $endereco = $_POST['txtEndereco'];
     
-    var_dump($id);
+    /*var_dump($id);
     var_dump($nome);
-    var_dump($endereco);
+    var_dump($endereco);*/
     
     //$con = mysqli_connect("localhost","bob","bob","univille");
     

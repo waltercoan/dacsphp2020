@@ -4,7 +4,8 @@ services:
    appphp2020walter:
      depends_on:
        - dbwalter
-     image: waltercoan/appphp2020:latest
+     #image: waltercoan/appphp2020:latest
+     image: appphp2020:latest
      ports:
        - "8080:80"
      restart: always
@@ -23,3 +24,5 @@ services:
        MYSQL_DATABASE: univille
        MYSQL_USER: bob
        MYSQL_PASSWORD: bob
+     volumes:
+       - ./db/:/docker-entrypoint-initdb.d

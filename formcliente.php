@@ -97,21 +97,6 @@
                 <input type="text" class="form-control" id="txtEndereco" 
                   name="txtEndereco" value="<?=$endereco?>">
             </div>
-            <!--<div class="form-group">
-                <label for="txtEstado">Estado</label>
-                <select id="txtEstado" name="txtEstado">
-                   <?php
-                      while($rowestado = $resultestados->fetch_row()){
-                   ?>
-                   <option value="<?=$rowestado[0]?>" <?=($estado==$rowestado[0]?"selected":"")?> ><?=$rowestado[1]?></option>
-                   <?php
-                      }
-                   ?>
-                </select>
-                
-            </div>-->
-            
-            
             <button type="submit" class="btn btn-primary">Enviar</button>
           </form>
       </p>

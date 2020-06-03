@@ -58,7 +58,7 @@
         $sql = "select * from cliente";
         $result = mysqli_query($con,$sql);
     ?>
-    <!-- Jumbotron Header -->
+    <!-- oioioioioioioJumbotron Header -->
     <header class="jumbotron my-4">
       <p class="lead">
           <a href="formcliente.php" class="btn btn-primary btn-lg">Incluir</a>
